@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jpa?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+    username: root
+    password: root
+
+  jpa:
+    generate-ddl: true #启用正向工程
+    hibernate:
+      ddl-auto: update #启动项目时创建或更新表
+    show-sql: true  #打印sql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+server:
+  port: 80
